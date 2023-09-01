@@ -8,7 +8,6 @@ import { ScreenHeaderBtn } from '../../components';
 import {COLORS, icons, SIZES} from '../../constants'
 
 import useFetch from '../../hook/useFetch'
-import FlightInfoTitle from '../../components/FlightInfoTitle';
 
 import FlightTabs from '../../components/FlightTabs'
 
@@ -26,6 +25,97 @@ const FlightInfo = () => {
 
   const onRefresh = () => {
 
+  }
+
+  const displayTabContent = () => {
+    switch (activeTab) {
+        case "Status":
+            return (
+                <View style = {styles.pcontainer}>
+                    <Text style = {styles.title}>Status:</Text>
+
+                    <View style = {styles.pointsContainer}>
+                        <View style = {styles.pointWrapper}>
+                            <View style = {styles.pointDot}/>
+                            <Text style = {styles.pointText}>Live:   {JSON.stringify(data.status.live)}</Text>
+
+                        </View>
+                        <View style = {styles.pointWrapper}>
+                            <View style = {styles.pointDot}/>
+                            <Text style = {styles.pointText}>Arrival: {data.status.text}</Text>
+
+                        </View>
+
+
+                        <View style = {styles.pointWrapper}>
+                            <View style = {styles.pointDot}/>
+                            <Text style = {styles.pointText}>Flight-Time (s): {data.time.historical.flighttime}</Text>
+                        </View>
+
+
+                    </View>
+
+                </View>
+            )
+            break;
+        case "Journey":
+            return (
+                <View style = {styles.pcontainer}>
+                    <Text style = {styles.title}>Journey:</Text>
+
+                    <View style = {styles.pointsContainer}>
+                       
+                        <View style = {styles.pointWrapper}>
+                            <View style = {styles.pointDot}/>
+                            <Text style = {styles.pointText}>IATA (airport dep): {data.airport.origin.code.iata}</Text>
+
+                        </View>
+                        <View style = {styles.pointWrapper}>
+                            <View style = {styles.pointDot}/>
+                            <Text style = {styles.pointText}>IATA (airport arr): {data.airport.destination.code.iata}</Text>
+
+                        </View>
+                        <View style = {styles.pointWrapper}>
+                            <View style = {styles.pointDot}/>
+                            <Text style = {styles.pointText}>Departing From: {data.airport.origin.name}</Text>
+
+                        </View>
+                        <View style = {styles.pointWrapper}>
+                            <View style = {styles.pointDot}/>
+                            <Text style = {styles.pointText}>Timezone: {data.airport.origin.timezone.name}</Text>
+
+                        </View>
+                        <View style = {styles.pointWrapper}>
+                            <View style = {styles.pointDot}/>
+                            <Text style = {styles.pointText}>Arriving At: {data.airport.destination.name}</Text>
+
+                        </View>
+                        <View style = {styles.pointWrapper}>
+                            <View style = {styles.pointDot}/>
+                            <Text style = {styles.pointText}>Timezone: {data.airport.destination.timezone.name}</Text>
+
+                        </View>
+                        
+
+
+                        <View style = {styles.pointWrapper}>
+                            <View style = {styles.pointDot}/>
+                            <Text style = {styles.pointText}>IATA (airline): {data.airline.code.iata}</Text>
+
+                        </View>
+                        <View style = {styles.pointWrapper}>
+                            <View style = {styles.pointDot}/>
+                            <Text style = {styles.pointText}>ICAO (airline): {data.airline.code.icao}</Text>
+
+                        </View>
+
+
+                    </View>
+
+                </View>
+            )
+            break;
+    }
   }
 
   console.log(params.id)
@@ -110,6 +200,8 @@ const FlightInfo = () => {
                             tabs = {tabs}
                             activeTab = {activeTab}
                             setActiveTab = {setActiveTab}/>
+
+                        {displayTabContent()}
                     </View>
                 )}
             </ScrollView>
