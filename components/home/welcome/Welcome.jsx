@@ -38,10 +38,10 @@ const Welcome = () => {
           style = {styles.searchInput}
           value = ""
           onChange={()=> {}}
-          placeholder = "Departure"
+          placeholder = "Enter the airlines ICAO code"
           />
         </View>
-        <View style = {styles.searchWrapper}>
+        {/* <View style = {styles.searchWrapper}>
           <TextInput 
           style = {styles.searchInput}
           value = ""
@@ -56,7 +56,7 @@ const Welcome = () => {
           onChange={()=> {}}
           placeholder = "YYYYMMDD"
           />
-        </View>
+        </View> */}
 
         <TouchableOpacity style = {styles.searchBtn} onPress={()=> {}}>
           <Image

@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     fontFamily: "DMRegular",
     color: COLORS.gray,
     marginTop: 3,
-    textTransform: "capitalize",
+//    textTransform: "capitalize",
   },
 });
 

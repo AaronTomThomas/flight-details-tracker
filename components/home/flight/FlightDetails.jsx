@@ -40,17 +40,11 @@ const FlightDetails = () => {
           ) : error ? (
             <Text> Something Went Wrong</Text>
           ) : (
-            <FlatList
-            data
-            renderItem={({item}) => (
+            data?.map((item) => (
               <FlightDetailsCard
                 item = {item}
               />
-            )}
-            keyExtractor={item => item?.flight_id}
-            contentContainerStyle={{columnGap: SIZES.medium}}
-            horizontal
-            />
+            ))
 
           )}
       </View>
