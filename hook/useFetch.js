@@ -23,10 +23,15 @@ const useFetch = (endpoint, query) => {
 
         try {
             const response = await axios.request(options);
-            setData(response.data.aircraft);
+            if (endpoint == 'detail') {
+                setData(response.data);
+            } else {
+                setData(response.data.aircraft);
+            }
             setIsLoading(false);
         } catch (error) {
             setError(error);
+            console.log(error);
             alert('There is an error');
         } finally {
             setIsLoading(false);

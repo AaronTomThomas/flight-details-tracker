@@ -43,6 +43,9 @@ const FlightDetails = () => {
             data?.map((item) => (
               <FlightDetailsCard
                 item = {item}
+                key={`${item[0]}`}
+                handleCardPress={()=> router.push(`/flight-details/${item[0]}`)}
+
               />
             ))
 
