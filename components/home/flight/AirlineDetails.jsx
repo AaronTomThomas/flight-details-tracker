@@ -10,14 +10,14 @@ import {COLORS, SIZES} from '../../../constants'
 import FlightDetailsCard from '../../common/cards/flight/FlightDetailsCard';
 import useFetch from '../../../hook/useFetch';
 
-const FlightDetails = () => {
+const AirlineDetails = () => {
 
   const router = useRouter();
   
-  const {data, isLoading, error} = useFetch(
-    'list-by-airline', {
-      airline: ""
-  })
+//   const {data, isLoading, error} = useFetch(
+//     'list-by-airline', {
+//       airline: ""
+//   })
 
 
 
@@ -25,17 +25,17 @@ const FlightDetails = () => {
   return (
     <View style = {styles.container}>
       <View style = {styles.header}>
-        <Text style = {styles.headerTitle}>Flight Details</Text>
+        <Text style = {styles.headerTitle}>Airline Details</Text>
         <TouchableOpacity onPress = {() => {
-                            router.push(`/find-airline-icao/1212`)
+                            router.back()
                         }}>
           <Text style = {styles.headerBtn}>
-          Find Airline ICAO
+          Find Plane by Airline
           </Text>
         </TouchableOpacity>
       </View>
 
-      <View style = {styles.cardsContainer}>
+      {/* <View style = {styles.cardsContainer}>
           {isLoading ? (
             <ActivityIndicator size = "large"/>
           ) : error ? (
@@ -45,15 +45,14 @@ const FlightDetails = () => {
               <FlightDetailsCard
                 item = {item}
                 key={`${item[0]}`}
-                handleCardPress={()=> router.push(`/flight-details/${item[0]}`)}
               />
             ))
 
           )}
-      </View>
+      </View> */}
 
     </View>
   )
 }
 
-export default FlightDetails
+export default AirlineDetails

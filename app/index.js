@@ -21,7 +21,9 @@ const Home = () => {
                     headerStyle: {backgroundColor: COLORS.lightWhite},
                     headerShadowVisible: false,
                     headerLeft: () => (
-                        <ScreenHeaderBtn iconUrl = {icons.menu} dimension="60%"/>
+                        <ScreenHeaderBtn 
+                        dimension="60%"
+                        />
                     ),
                     // headerRight:() => (
                     //     <ScreenHeaderBtn iconUrl = {images.profile} dimension = "100%"/>
@@ -43,7 +45,7 @@ const Home = () => {
                     handleClick={()=> {
                         if (searchTerm) {
                             console.log("SEARCHTERM" + searchTerm)
-                            router.push(`/search/${searchTerm}`)
+                            router.push(`/search-airline/${searchTerm}`)
                         } else {
                             console.log("L")
                         }

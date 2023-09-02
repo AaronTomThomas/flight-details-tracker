@@ -18,17 +18,17 @@ import {icons, SIZES} from '../../../constants'
 const flights = ["AXM", "UAE"];
 
 
-const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
+const WelcomeAL = ({ searchTerm, setSearchTerm, handleClick }) => {
   const router = useRouter();
 
   return (
     <View>
       <View style ={styles.container}>
         <Text style = {styles.userName}>
-          Hey There!
+          Hey Again!
         </Text>
         <Text style = {styles.welcomeMessage}>
-          Find Any Plane, From Any Airline
+          Find the ICAO of your Airline
         </Text>
       </View>
 
@@ -38,7 +38,7 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
           style = {styles.searchInput}
           value = {searchTerm}
           onChangeText={(text)=> setSearchTerm(text)}
-          placeholder = "Enter the airlines ICAO code"
+          placeholder = "Enter the airlines name"
           />
         </View>
         {/* <View style = {styles.searchWrapper}>
@@ -92,4 +92,4 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
   )
 }
 
-export default Welcome
+export default WelcomeAL

@@ -2,10 +2,13 @@ import ScreenHeaderBtn from "./common/header/ScreenHeaderBtn";
 
 // home screen
 import Welcome from "./home/welcome/Welcome";
+import WelcomeAL from "./home/welcome/WelcomeAL";
 import FlightDetails from "./home/flight/FlightDetails";
 import Nearbyjobs from "./home/nearby/Nearbyjobs";
 import Popularjobs from "./home/popular/Popularjobs";
 import FlightDetailsCard from "./common/cards/flight/FlightDetailsCard";
+import AirlineDetails from "./home/flight/AirlineDetails"
+import AirlineDetailsCard from "./common/cards/flight/AirlineDetailsCard";
 
 // job details screen
 import Company from "./jobdetails/company/Company";
@@ -29,5 +32,8 @@ export {
   JobFooter,
   Specifics,
   NearbyJobCard,
-  FlightDetailsCard
+  FlightDetailsCard,
+  WelcomeAL,
+  AirlineDetails,
+  AirlineDetailsCard
 };
