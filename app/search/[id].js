@@ -32,7 +32,7 @@ const FlightSearch = () => {
                 }
             };
 
-            console.log("params" + params.id);
+            console.log("params(search plane): " + params.id);
             const response = await axios.request(options);
             setSearchResult(response.data.aircraft);
         } catch (error) {
@@ -76,6 +76,19 @@ const FlightSearch = () => {
 
 
             {console.log("Search" + searchResult)}
+            {searchResult === undefined ? (
+            <Text>No data for this airline</Text>
+            ) :  searchResult.length === 0 ? (
+                <View style = {{
+                    padding: 30,
+                }}>
+                <View style={styles.container}>
+                <Text style={styles.searchTitle}>{params.id}</Text>
+                <Text style={styles.noOfSearchedJobs}>Flights With Info</Text>
+                </View>
+                <Text style={styles.searchTitle}>-----------------</Text>
+                </View>
+            ) : (
              <FlatList
                 data={searchResult}
                 renderItem={({ item }) => (
@@ -129,7 +142,7 @@ const FlightSearch = () => {
                         </TouchableOpacity>
                     </View>
                 )}
-            /> 
+            /> )}
         </SafeAreaView>
     )
 }

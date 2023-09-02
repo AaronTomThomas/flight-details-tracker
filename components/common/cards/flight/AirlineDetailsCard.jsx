@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { View, Text, Image, ClipboardStatic} from 'react-native'
-
+import Clipboard from '@react-native-clipboard/clipboard';
 import {icons, SIZES} from '../../../../constants'
 
 import styles from './FlightDetailsCard.style'
@@ -10,14 +10,15 @@ import { TouchableOpacity} from 'react-native-gesture-handler'
 
 
 const AirlineDetailsCard = ({item}) => {
-  const [clippedText, setClippedText] = useState('');
-  return (
-    <View>
+  const [copiedText, setCopiedText] = useState('');
 
-    <TouchableOpacity
+
+  return (
+
+
+    <View
     style = {styles.container}
-    onPress = {()=>{
-    }}>
+    onPress={()=>{}}>
         <TouchableOpacity style = {styles.logoContainer}>
             <Image
             source = {icons.planeIcon}
@@ -29,9 +30,6 @@ const AirlineDetailsCard = ({item}) => {
         <Text style = {styles.jobName}>{item.airlineName}</Text>
         <Text sx={{ textTransform: 'uppercase' }} style = {styles.jobType}>{item.icao}</Text>
 
-
-    </TouchableOpacity>
-    <Text sx={{ textTransform: 'uppercase' }} style = {styles.jobType}>(click to copy icao to clipboard)</Text>
 
     </View>
 

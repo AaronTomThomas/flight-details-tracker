@@ -21,10 +21,22 @@ const Home = () => {
                     headerStyle: {backgroundColor: COLORS.lightWhite},
                     headerShadowVisible: false,
                     headerLeft: () => (
-                        <ScreenHeaderBtn 
-                        dimension="60%"
-                        />
+                        <View style = {{
+                            width: 50,
+                            height: 50,
+                            backgroundColor: COLORS.white,
+                            borderRadius: SIZES.medium,
+                            justifyContent: "center",
+                            alignItems: "center",
+                        }}>
+                            <ScreenHeaderBtn 
+                            iconUrl={icons.planeflies}
+                            dimension="50%"
+                            
+                            />
+                        </View>
                     ),
+                    
                     // headerRight:() => (
                     //     <ScreenHeaderBtn iconUrl = {images.profile} dimension = "100%"/>
                     // ),
@@ -44,8 +56,8 @@ const Home = () => {
                     setSearchTerm = {setSearchTerm}
                     handleClick={()=> {
                         if (searchTerm) {
-                            console.log("SEARCHTERM" + searchTerm)
-                            router.push(`/search-airline/${searchTerm}`)
+                            console.log("SEARCHTERM: " + searchTerm)
+                            router.push(`/search/${searchTerm}`)
                         } else {
                             console.log("L")
                         }

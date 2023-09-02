@@ -25,18 +25,17 @@ const AirlineSearch = () => {
             const options = {
                 method: 'GET',
                 url: 'https://akrx.p.rapidapi.com/Airline/airlineName',
-                params: {
-                  airlineName: 'France'
-                },
+                params: {airlineName: `${params.id}`},
                 headers: {
                   'X-RapidAPI-Key': '6d5962bff1msh9fce4dd7313e2b0p1a3488jsn657618e050ef',
                   'X-RapidAPI-Host': 'akrx.p.rapidapi.com'
                 }
               };
 
-            console.log("params" + params.id);
+            console.log("params(search-airline) " + params.id);
             const response = await axios.request(options);
             setSearchResult(response.data.airlines);
+            console.log("search:" ,{searchResult})
         } catch (error) {
             setSearchError(error);
             console.log(error);
@@ -77,13 +76,19 @@ const AirlineSearch = () => {
             />
 
 
-            {console.log("Search" + searchResult)}
+         
+            
+            {searchResult === undefined ? (
+            <Text>No data for this airline</Text>
+            ) :  searchResult.length === 0 ? (
+                <Text>No flights found for this airline</Text>
+            ) : (
              <FlatList
                 data={searchResult}
                 renderItem={({ item }) => (
                     <AirlineDetailsCard
                     item = {item}
-                    key={`${item[0]}`}
+                    key={item}
                     />
                 )}
                 keyExtractor={(item) => item[0]}
@@ -105,7 +110,7 @@ const AirlineSearch = () => {
                 )}
                 ListFooterComponent={() => (
                     <View style={styles.footerContainer}>
-                        <TouchableOpacity
+                        {/* <TouchableOpacity
                             style={styles.paginationButton}
                             onPress={() => handlePagination('left')}
                         >
@@ -114,11 +119,11 @@ const AirlineSearch = () => {
                                 style={styles.paginationImage}
                                 resizeMode="contain"
                             />
-                        </TouchableOpacity>
+                        </TouchableOpacity> */}
                         <View style={styles.paginationTextBox}>
                             <Text style={styles.paginationText}>{page}</Text>
                         </View>
-                        <TouchableOpacity
+                        {/* <TouchableOpacity
                             style={styles.paginationButton}
                             onPress={() => handlePagination('right')}
                         >
@@ -127,10 +132,11 @@ const AirlineSearch = () => {
                                 style={styles.paginationImage}
                                 resizeMode="contain"
                             />
-                        </TouchableOpacity>
+                        </TouchableOpacity> */}
                     </View>
                 )}
-            /> 
+             /> 
+            )}
         </SafeAreaView>
     )
 }

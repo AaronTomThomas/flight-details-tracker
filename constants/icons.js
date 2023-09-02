@@ -9,6 +9,7 @@ import location from "../assets/icons/location.png";
 import chevronLeft from '../assets/icons/chevron-left.png'
 import chevronRight from '../assets/icons/chevron-right.png'
 import planeIcon from '../assets/icons/planeicon.png'
+import planeflies from '../assets/icons/planeflies.png'
 
 export default {
   heart,
@@ -21,5 +22,6 @@ export default {
   location,
   chevronLeft,
   chevronRight,
-  planeIcon
+  planeIcon,
+  planeflies
 };
