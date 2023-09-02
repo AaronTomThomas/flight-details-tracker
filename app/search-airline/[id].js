@@ -81,7 +81,15 @@ const AirlineSearch = () => {
             {searchResult === undefined ? (
             <Text>No data for this airline</Text>
             ) :  searchResult.length === 0 ? (
-                <Text>No flights found for this airline</Text>
+                <View style = {{
+                    padding: 30,
+                }}>
+                <View style={styles.container}>
+                <Text style={styles.searchTitle}>{params.id}</Text>
+                <Text style={styles.noOfSearchedJobs}>Airlines</Text>
+                </View>
+                <Text style={styles.searchTitle}>-----------------</Text>
+                </View>
             ) : (
              <FlatList
                 data={searchResult}
@@ -91,13 +99,13 @@ const AirlineSearch = () => {
                     key={item}
                     />
                 )}
-                keyExtractor={(item) => item[0]}
+                keyExtractor={(item) => item}
                 contentContainerStyle={{ padding: SIZES.medium, rowGap: SIZES.medium }}
                 ListHeaderComponent={() => (
                     <>
                         <View style={styles.container}>
                             <Text style={styles.searchTitle}>{params.id}</Text>
-                            <Text style={styles.noOfSearchedJobs}>Flights With Info</Text>
+                            <Text style={styles.noOfSearchedJobs}>Airlines</Text>
                         </View>
                         <View style={styles.loaderContainer}>
                             {searchLoader ? (

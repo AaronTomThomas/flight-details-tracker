@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import { useState } from 'react';
 import {Text, View, SafeAreaView, ScrollView, ActivityIndicator, RefreshControl, Image} from 'react-native';
 
@@ -23,9 +23,7 @@ const FlightInfo = () => {
   const router = useRouter();
 
 
-  const onRefresh = () => {
-
-  }
+  
 
   const displayTabContent = () => {
     switch (activeTab) {
@@ -129,6 +127,12 @@ const FlightInfo = () => {
     flight: params.id
   })
 
+  const onRefresh = useCallback(()=> {
+    setRefreshing(true);
+    refetch();
+    setRefreshing(false);
+  })
+
 
 
   return (
@@ -148,12 +152,12 @@ const FlightInfo = () => {
                         handlePress={()=>router.back()}
                     />
                 ),
-                headerRight: () => (
-                    <ScreenHeaderBtn
-                        iconUrl = {icons.share}
-                        dimension= "60%"
-                    />
-                ),
+                // headerRight: () => (
+                //     <ScreenHeaderBtn
+                //         iconUrl = {icons.share}
+                //         dimension= "60%"
+                //     />
+                // ),
                 headerTitle: ""
                 
             }}
