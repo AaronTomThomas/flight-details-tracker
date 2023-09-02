@@ -42,7 +42,10 @@ const Home = () => {
                     setSearchTerm = {setSearchTerm}
                     handleClick={()=> {
                         if (searchTerm) {
+                            console.log("SEARCHTERM" + searchTerm)
                             router.push(`/search/${searchTerm}`)
+                        } else {
+                            console.log("L")
                         }
                     }}/>
 

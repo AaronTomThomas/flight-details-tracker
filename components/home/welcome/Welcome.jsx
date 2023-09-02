@@ -15,7 +15,7 @@ import styles from './welcome.style'
 import {icons, SIZES} from '../../../constants'
 
 
-const flights = ["Flights"];
+const flights = ["AXM", "UAE"];
 
 
 const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
@@ -37,7 +37,7 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
           <TextInput 
           style = {styles.searchInput}
           value = {searchTerm}
-          onChange={(text)=> setSearchTerm(text)}
+          onChangeText={(text)=> setSearchTerm(text)}
           placeholder = "Enter the airlines ICAO code"
           />
         </View>
@@ -66,7 +66,7 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
         </TouchableOpacity>
       </View>
       
-      <View style = {styles.tabsContainer}>
+      {/* <View style = {styles.tabsContainer}>
         <FlatList data={flights}
           renderItem={({item}) => (
             <TouchableOpacity 
@@ -84,7 +84,7 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
           horizontal
           />
           
-      </View>
+      </View> */}
       
 
     </View>

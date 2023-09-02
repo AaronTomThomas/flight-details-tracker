@@ -25,15 +25,16 @@ const FlightSearch = () => {
             const options = {
                 method: 'GET',
                 url: `https://flight-radar1.p.rapidapi.com/flights/list-by-airline`,
-                params: params.id,
+                params: {airline: `${params.id}`},
                 headers: {
                   'X-RapidAPI-Key': '6d5962bff1msh9fce4dd7313e2b0p1a3488jsn657618e050ef',
                   'X-RapidAPI-Host': 'flight-radar1.p.rapidapi.com'
                 }
             };
 
+            console.log("params" + params.id);
             const response = await axios.request(options);
-            setSearchResult(response.data.data);
+            setSearchResult(response.data.aircraft);
         } catch (error) {
             setSearchError(error);
             console.log(error);
@@ -73,7 +74,9 @@ const FlightSearch = () => {
                 }}
             />
 
-            <FlatList
+
+            {console.log("Search" + searchResult)}
+             <FlatList
                 data={searchResult}
                 renderItem={({ item }) => (
                     <FlightDetailsCard
@@ -82,7 +85,7 @@ const FlightSearch = () => {
                     handleCardPress={()=> router.push(`/flight-details/${item[0]}`)}
                     />
                 )}
-                keyExtractor={(item) => item.job_id}
+                keyExtractor={(item) => item[0]}
                 contentContainerStyle={{ padding: SIZES.medium, rowGap: SIZES.medium }}
                 ListHeaderComponent={() => (
                     <>
@@ -126,7 +129,7 @@ const FlightSearch = () => {
                         </TouchableOpacity>
                     </View>
                 )}
-            />
+            /> 
         </SafeAreaView>
     )
 }

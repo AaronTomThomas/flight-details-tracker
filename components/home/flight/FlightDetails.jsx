@@ -19,7 +19,6 @@ const FlightDetails = () => {
       airline: 'UAE'
   })
 
-  console.log(data);
 
 
 
@@ -45,7 +44,6 @@ const FlightDetails = () => {
                 item = {item}
                 key={`${item[0]}`}
                 handleCardPress={()=> router.push(`/flight-details/${item[0]}`)}
-
               />
             ))
 

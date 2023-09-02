@@ -31,88 +31,91 @@ const FlightInfo = () => {
     switch (activeTab) {
         case "Status":
             return (
-                <View style = {styles.pcontainer}>
-                    <Text style = {styles.title}>Status:</Text>
+                <View style={styles.pcontainer}>
+                    <Text style={styles.title}>Status:</Text>
 
-                    <View style = {styles.pointsContainer}>
-                        <View style = {styles.pointWrapper}>
-                            <View style = {styles.pointDot}/>
-                            <Text style = {styles.pointText}>Live:   {JSON.stringify(data.status.live)}</Text>
-
+                    <View style={styles.pointsContainer}>
+                        <View style={styles.pointWrapper}>
+                            <View style={styles.pointDot} />
+                            <Text style={styles.pointText}>
+                                Live: {data.status.live ? 'Yes' : 'No' || 'N/A'}
+                            </Text>
                         </View>
-                        <View style = {styles.pointWrapper}>
-                            <View style = {styles.pointDot}/>
-                            <Text style = {styles.pointText}>Arrival: {data.status.text}</Text>
-
-                        </View>
-
-
-                        <View style = {styles.pointWrapper}>
-                            <View style = {styles.pointDot}/>
-                            <Text style = {styles.pointText}>Flight-Time (s): {data.time.historical.flighttime}</Text>
+                        <View style={styles.pointWrapper}>
+                            <View style={styles.pointDot} />
+                            <Text style={styles.pointText}>
+                                Arrival: {data.status.text || 'N/A'}
+                            </Text>
                         </View>
 
-
+                        <View style={styles.pointWrapper}>
+                            <View style={styles.pointDot} />
+                            <Text style={styles.pointText}>
+                                Flight-Time (s): {data.time.historical.flighttime || 'N/A'}
+                            </Text>
+                        </View>
                     </View>
-
                 </View>
+
             )
             break;
         case "Journey":
             return (
-                <View style = {styles.pcontainer}>
-                    <Text style = {styles.title}>Journey:</Text>
-
-                    <View style = {styles.pointsContainer}>
-                       
-                        <View style = {styles.pointWrapper}>
-                            <View style = {styles.pointDot}/>
-                            <Text style = {styles.pointText}>IATA (airport dep): {data.airport.origin.code.iata}</Text>
-
-                        </View>
-                        <View style = {styles.pointWrapper}>
-                            <View style = {styles.pointDot}/>
-                            <Text style = {styles.pointText}>IATA (airport arr): {data.airport.destination.code.iata}</Text>
-
-                        </View>
-                        <View style = {styles.pointWrapper}>
-                            <View style = {styles.pointDot}/>
-                            <Text style = {styles.pointText}>Departing From: {data.airport.origin.name}</Text>
-
-                        </View>
-                        <View style = {styles.pointWrapper}>
-                            <View style = {styles.pointDot}/>
-                            <Text style = {styles.pointText}>Timezone: {data.airport.origin.timezone.name}</Text>
-
-                        </View>
-                        <View style = {styles.pointWrapper}>
-                            <View style = {styles.pointDot}/>
-                            <Text style = {styles.pointText}>Arriving At: {data.airport.destination.name}</Text>
-
-                        </View>
-                        <View style = {styles.pointWrapper}>
-                            <View style = {styles.pointDot}/>
-                            <Text style = {styles.pointText}>Timezone: {data.airport.destination.timezone.name}</Text>
-
-                        </View>
-                        
-
-
-                        <View style = {styles.pointWrapper}>
-                            <View style = {styles.pointDot}/>
-                            <Text style = {styles.pointText}>IATA (airline): {data.airline.code.iata}</Text>
-
-                        </View>
-                        <View style = {styles.pointWrapper}>
-                            <View style = {styles.pointDot}/>
-                            <Text style = {styles.pointText}>ICAO (airline): {data.airline.code.icao}</Text>
-
-                        </View>
-
-
+                <View style={styles.pcontainer}>
+                <Text style={styles.title}>Journey:</Text>
+            
+                <View style={styles.pointsContainer}>
+                    <View style={styles.pointWrapper}>
+                        <View style={styles.pointDot} />
+                        <Text style={styles.pointText}>
+                            IATA (airport dep): {data.airport.origin.code.iata || 'N/A'}
+                        </Text>
                     </View>
-
+                    <View style={styles.pointWrapper}>
+                        <View style={styles.pointDot} />
+                        <Text style={styles.pointText}>
+                            IATA (airport arr): {data.airport.destination.code.iata || 'N/A'}
+                        </Text>
+                    </View>
+                    <View style={styles.pointWrapper}>
+                        <View style={styles.pointDot} />
+                        <Text style={styles.pointText}>
+                            Departing From: {data.airport.origin.name || 'N/A'}
+                        </Text>
+                    </View>
+                    <View style={styles.pointWrapper}>
+                        <View style={styles.pointDot} />
+                        <Text style={styles.pointText}>
+                            Timezone: {data.airport.origin.timezone.name || 'N/A'}
+                        </Text>
+                    </View>
+                    <View style={styles.pointWrapper}>
+                        <View style={styles.pointDot} />
+                        <Text style={styles.pointText}>
+                            Arriving At: {data.airport.destination.name || 'N/A'}
+                        </Text>
+                    </View>
+                    <View style={styles.pointWrapper}>
+                        <View style={styles.pointDot} />
+                        <Text style={styles.pointText}>
+                            Timezone: {data.airport.destination.timezone.name || 'N/A'}
+                        </Text>
+                    </View>
+                    <View style={styles.pointWrapper}>
+                        <View style={styles.pointDot} />
+                        <Text style={styles.pointText}>
+                            IATA (airline): {data.airline.code.iata || 'N/A'}
+                        </Text>
+                    </View>
+                    <View style={styles.pointWrapper}>
+                        <View style={styles.pointDot} />
+                        <Text style={styles.pointText}>
+                            ICAO (airline): {data.airline.code.icao || 'N/A'}
+                        </Text>
+                    </View>
                 </View>
+            </View>
+            
             )
             break;
     }

@@ -5,6 +5,7 @@ import Welcome from "./home/welcome/Welcome";
 import FlightDetails from "./home/flight/FlightDetails";
 import Nearbyjobs from "./home/nearby/Nearbyjobs";
 import Popularjobs from "./home/popular/Popularjobs";
+import FlightDetailsCard from "./common/cards/flight/FlightDetailsCard";
 
 // job details screen
 import Company from "./jobdetails/company/Company";
@@ -27,5 +28,6 @@ export {
   JobAbout,
   JobFooter,
   Specifics,
-  NearbyJobCard
+  NearbyJobCard,
+  FlightDetailsCard
 };
