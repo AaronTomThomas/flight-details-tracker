@@ -1,5 +1,7 @@
 ### 🛩️ Aircraft Information App
 
+![Screenshot 1](screenshots\Screenshot_20230902-225251.png)
+
 ## Introduction
 
 This Aircraft Information App is a mobile application built with React Native and Expo that provides users with detailed information about airlines and aircraft. It leverages the power of the RAPIDAPI platform to access external APIs for retrieving data. Users can search for airlines by name and explore detailed aircraft information using airline ICAO codes.
