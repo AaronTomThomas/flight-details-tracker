@@ -1,12 +1,12 @@
 ### 🛩️ Aircraft Information App
 
-![Screenshot 1](https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s1.png)
-![Screenshot 2](https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s2.png)
-![Screenshot 3](https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s3.png)
-![Screenshot 4](https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s4.png)
-![Screenshot 5](https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s5.png)
-![Screenshot 6](https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s6.png)
-![Screenshot 7](https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s7.png)
+<img src="https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s1.png" alt="Screenshot 1" width="300" style="max-height: 600px;">
+<img src="https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s2.png" alt="Screenshot 2" width="300" style="max-height: 600px;">
+<img src="https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s3.png" alt="Screenshot 3" width="300" style="max-height: 600px;">
+<img src="https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s4.png" alt="Screenshot 4" width="300" style="max-height: 600px;">
+<img src="https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s5.png" alt="Screenshot 5" width="300" style="max-height: 600px;">
+<img src="https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s6.png" alt="Screenshot 6" width="300" style="max-height: 600px;">
+<img src="https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s7.png" alt="Screenshot 7" width="300" style="max-height: 600px;">
 
 ## Introduction
 
