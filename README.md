@@ -1,6 +1,12 @@
 ### 🛩️ Aircraft Information App
 
-![Screenshot 1](screenshots\Screenshot_20230902-225251.png)
+![Screenshot 1](screenshots\s1.png)
+![Screenshot 2](screenshots\s2.png)
+![Screenshot 3](screenshots\s3.png)
+![Screenshot 4](screenshots\s4.png)
+![Screenshot 5](screenshots\s5.png)
+![Screenshot 6](screenshots\s6.png)
+![Screenshot 7](screenshots\s7.png)
 
 ## Introduction
 
