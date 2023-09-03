@@ -1,12 +1,12 @@
 ### 🛩️ Aircraft Information App
 
-<img src="https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s1.png" alt="Screenshot 1" width="300" style="max-height: 600px;">
-<img src="https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s2.png" alt="Screenshot 2" width="300" style="max-height: 600px;">
-<img src="https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s3.png" alt="Screenshot 3" width="300" style="max-height: 600px;">
-<img src="https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s4.png" alt="Screenshot 4" width="300" style="max-height: 600px;">
-<img src="https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s5.png" alt="Screenshot 5" width="300" style="max-height: 600px;">
-<img src="https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s6.png" alt="Screenshot 6" width="300" style="max-height: 600px;">
-<img src="https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s7.png" alt="Screenshot 7" width="300" style="max-height: 600px;">
+<img src="https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s1.png" alt="Screenshot 1" width="100" style="max-height: 200px;">
+<img src="https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s2.png" alt="Screenshot 2" width="100" style="max-height: 200px;">
+<img src="https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s3.png" alt="Screenshot 3" width="100" style="max-height: 200px;">
+<img src="https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s4.png" alt="Screenshot 4" width="100" style="max-height: 200px;">
+<img src="https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s5.png" alt="Screenshot 5" width="100" style="max-height: 200px;">
+<img src="https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s6.png" alt="Screenshot 6" width="100" style="max-height: 200px;">
+<img src="https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s7.png" alt="Screenshot 7" width="100" style="max-height: 200px;">
 
 ## Introduction
 
