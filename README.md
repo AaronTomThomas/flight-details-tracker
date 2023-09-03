@@ -1,6 +1,6 @@
 ### 🛩️ Aircraft Information App
 
-![Screenshot 1](screenshots\s1.png)
+![Screenshot 1](https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s3.png)
 ![Screenshot 2](screenshots\s2.png)
 ![Screenshot 3](screenshots\s3.png)
 ![Screenshot 4](screenshots\s4.png)
