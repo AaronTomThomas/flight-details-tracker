@@ -1,12 +1,12 @@
 ### 🛩️ Aircraft Information App
 
-![Screenshot 1](https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s3.png)
-![Screenshot 2](screenshots\s2.png)
-![Screenshot 3](screenshots\s3.png)
-![Screenshot 4](screenshots\s4.png)
-![Screenshot 5](screenshots\s5.png)
-![Screenshot 6](screenshots\s6.png)
-![Screenshot 7](screenshots\s7.png)
+![Screenshot 1](https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s1.png)
+![Screenshot 2](https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s2.png)
+![Screenshot 3](https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s3.png)
+![Screenshot 4](https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s4.png)
+![Screenshot 5](https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s5.png)
+![Screenshot 6](https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s6.png)
+![Screenshot 7](https://github.com/AaronTomThomas/flight-details-tracker/blob/master/screenshots/s7.png)
 
 ## Introduction
 
