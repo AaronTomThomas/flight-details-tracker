@@ -93,27 +93,17 @@ Before you begin, ensure you have met the following requirements:
    yarn install
    ```
 
-4. **Set Up RapidAPI Key:**
-
-   Open the project in your preferred code editor. Create a `.env` file in the project's root directory and add your RapidAPI key like this:
-
-   ```bash
-   RAPIDAPI_KEY=your-rapidapi-key
-   ```
-
-   Replace `your-rapidapi-key` with your actual API key.
-
-5. **Run the App:**
+4. **Run the App:**
 
    Start the Expo development server:
 
    ```bash
-   expo start
+   npx expo start
    ```
 
    This command will open a web interface in your default browser. You can use this interface to run the app on an emulator or a physical device.
 
-6. **Access the App:**
+5. **Access the App:**
 
    Follow the instructions from the Expo interface to open the app on your Android or iOS emulator, or scan the QR code with the Expo Go app on your physical device.
 
